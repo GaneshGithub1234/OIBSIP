@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+
+:root{
+    --text: 1.5rem;
+    --head:calc(1rem + 5vw);
+    --bg-color:#eea647;
+}
+
+body{
+    font-family: 'Edu SA Beginner', cursive;
+}
+
+.hero-section{
+    min-height: 100vh;
+    background:
+    linear-gradient(rgba(3, 3, 3, 0.767),transparent ),
+    url("istockphoto-1311088152-170667a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1rem;
+    color: white;
+    transform: translateY(-100%);
+    animation: downslide 850ms ease-in 1s forwards;
+}
+
+@keyframes downslide{
+    from{
+        transform: translateY(-100%);
+    }to{
+        transform: translateY(0%);
+    }
+
+}
+
+.navbar ul{
+    list-style: none;   
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+    border-bottom: 2px solid transparent ;
+}
+
+.navbar ul li a:hover{
+    border-bottom: 2px solid white ;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.hero-text{
+    color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slide 1s ease-in-out;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translateX(0);
+    }
+}
+
+.hero-text a{
+    color: white;
+    background: var(--bg-color);
+    text-decoration:none;
+    font-size: var(--text);
+    font-weight: 900;
+    padding: 0.8rem 1rem;
+    margin: 0.8 auto;
+    display:block;
+    transition: opacity 250ms linear;
+}
+
+.hero-text a:hover{
+opacity: 0.8;
+}
+
+
+.hero-text h2{
+    font-size: var(--head);
+}
+
+.hero-text p{
+    font-size: 3rem) ;
+}
